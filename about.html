@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — OFFICE BANDHHU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <span>📅 Vol. 1, Issue 1 · June 2026 &nbsp;·&nbsp; First Edition · ₹109</span>
+    <div class="util-social">
+      <a href="mailto:officebandhhu@gmail.com">Email</a>
+      <a href="https://www.instagram.com/officebandhhu" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@officebandhhu" target="_blank">YouTube</a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="wrap">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">
+        <div class="logo-sq">OB</div>
+        <div class="logo-text"><span class="brand">OFFICE BANDHHU</span><span class="tagline" data-gu="ગુજરાત સરકારી કર્મચારીઓ માટેનું મેગેઝિન" data-en="Gujarat Govt Employees' Magazine">ગુજરાત સરકારી કર્મચારીઓ માટેનું મેગેઝિન</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="articles.html" data-gu="લેખો" data-en="Articles">લેખો</a></li>
+        <li><a href="magazine.html" data-gu="મેગેઝિન" data-en="Magazine">મેગેઝિન</a></li>
+        <li><a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a></li>
+        <li><a href="about.html" class="active" data-gu="અમારા વિશે" data-en="About">અમારા વિશે</a></li>
+        <li><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="langToggle" class="btn-lang" onclick="toggleLang()">🌐 English</button>
+        <span id="userBadge" class="user-badge" style="display:none"></span>
+        <a href="subscribe.html" class="btn-sub-nav" data-gu="સભ્ય બનો ₹109" data-en="Subscribe ₹109">સભ્ય બનો ₹109</a>
+        <button id="loginBtn" class="btn-login-outline" onclick="openLoginModal()" data-gu="લોગઇન" data-en="Login">લોગઇન</button>
+        <button id="logoutBtn" class="btn-logout" style="display:none" onclick="logout()" data-gu="લોગ આઉટ" data-en="Logout">લોગ આઉટ</button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="articles.html" data-gu="લેખો" data-en="Articles">લેખો</a><a href="magazine.html" data-gu="મેગેઝિન" data-en="Magazine">મેગેઝિન</a>
+    <a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a><a href="about.html" class="active" data-gu="અમારા વિશે" data-en="About">અમારા વિશે</a><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a>
+    <a href="#" onclick="openLoginModal();return false;" style="color:var(--saffron);font-weight:700" data-gu="લોગઇન / મારો ખાતો" data-en="Login / My Account">લોગઇન / મારો ખાતો</a>
+  </div>
+</nav>
+
+<!-- PAGE BANNER -->
+<div class="page-banner">
+  <div class="wrap">
+    <div class="eyebrow">About Us</div>
+    <h1>ઓફિસ બંધુ — Office Bandhhu</h1>
+    <p>Gujarat's first magazine exclusively for government employees — your trusted monthly companion for service news, rights, and updates.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,.7)">About</span></div>
+  </div>
+</div>
+
+<!-- MISSION -->
+<section class="mission-sec">
+  <div class="wrap">
+    <div class="mission-grid">
+      <div class="mission-text">
+        <h2>Our Mission: Be the Companion Every Govt Employee Needs</h2>
+        <p>The word "Bandhhu" (બંધુ) means companion or friend in Gujarati. That is exactly what this magazine aims to be — a reliable, knowledgeable friend who keeps you informed about matters that directly affect your service life every month.</p>
+        <p>Gujarat has over 5 lakh government employees across departments, districts, and talukas. Yet there was no single publication dedicated to their interests — covering transfers, promotions, service rules, RTI rights, pension updates, court judgments, and vigilance matters in one place.</p>
+        <p>OFFICE BANDHHU was launched in June 2026 to fill that gap. We are registered with the Press Registrar of India (PRGI No. GJGUJ/26/A3280) and are committed to independent, accurate, and useful journalism for Gujarat's government workforce.</p>
+        <a href="subscribe.html" class="btn-primary" style="margin-top:8px">Subscribe Today ₹1090/yr</a>
+      </div>
+      <div class="mission-visual">
+        <div class="stat-block"><div class="sb-num">5L+</div><div class="sb-label">Gujarat govt employees — our readers</div><div class="sb-divider"></div></div>
+        <div class="stat-block"><div class="sb-num">Vol. 1</div><div class="sb-label">Launched June 2026 — first edition</div><div class="sb-divider"></div></div>
+        <div class="stat-block"><div class="sb-num">10+</div><div class="sb-label">Topics covered per issue</div><div class="sb-divider"></div></div>
+        <div class="stat-block"><div class="sb-num">₹109</div><div class="sb-label">Per issue — accessible to all</div><div class="sb-divider"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-sec">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="sec-label"><div><h2>Editorial Team</h2><p>The people behind OFFICE BANDHHU</p></div></div>
+    </div>
+    <div class="team-grid" style="grid-template-columns:repeat(3,1fr);max-width:840px">
+      <div class="team-card">
+        <div class="team-av" style="background:linear-gradient(135deg,#0c1b40,#2d4a8f)"><span style="color:var(--saffron)">HM</span></div>
+        <div class="team-info">
+          <h4>Smt. Heta Supath Mohile</h4>
+          <div class="role">Editor, Publisher &amp; Owner</div>
+          <p>Founder of OFFICE BANDHHU. Passionate about informing and empowering Gujarat's government employees through quality journalism.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-av" style="background:linear-gradient(135deg,#1a5e3a,#0c401b)"><span style="color:var(--saffron)">YM</span></div>
+        <div class="team-info">
+          <h4>Sri Supath Yogeshbhai Mohile</h4>
+          <div class="role">Co-Editor</div>
+          <p>Visiting Faculty at SPIPA (Sardar Patel Institute of Public Administration), Ahmedabad. Brings deep expertise in government administration.</p>
+          <p style="font-size:12px;color:var(--slate);margin-top:4px">📞 +91-94081 62631</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-av" style="background:linear-gradient(135deg,#5e4a1a,#403010)"><span style="color:var(--saffron)">HJ</span></div>
+        <div class="team-info">
+          <h4>Sri Haresh Joshi</h4>
+          <div class="role">Expert Contributor — NPS &amp; Accounts</div>
+          <p>Retired Deputy Director (Accounts), Gujarat Government. Writes authoritative guides on NPS, pension, and financial service matters.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATION DETAILS -->
+<section style="padding:64px 0;background:var(--white)">
+  <div class="wrap" style="max-width:820px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:36px">
+      <h2 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:8px">Publication Details</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div style="background:var(--ivory);border-radius:8px;padding:20px;border:1px solid var(--border)">
+        <h4 style="font-weight:700;color:var(--navy);margin-bottom:12px;font-size:14px">📰 Registration</h4>
+        <table style="width:100%;font-size:13px;border-collapse:collapse">
+          <tr><td style="color:var(--slate);padding:4px 0;width:45%">Publication Name</td><td style="color:var(--charcoal);font-weight:600">OFFICE BANDHHU</td></tr>
+          <tr><td style="color:var(--slate);padding:4px 0">PRGI No.</td><td style="color:var(--charcoal);font-weight:600">GJGUJ/26/A3280</td></tr>
+          <tr><td style="color:var(--slate);padding:4px 0">Frequency</td><td style="color:var(--charcoal);font-weight:600">Monthly</td></tr>
+          <tr><td style="color:var(--slate);padding:4px 0">Language</td><td style="color:var(--charcoal);font-weight:600">Gujarati &amp; English</td></tr>
+          <tr><td style="color:var(--slate);padding:4px 0">First Issue</td><td style="color:var(--charcoal);font-weight:600">12 June 2026</td></tr>
+          <tr><td style="color:var(--slate);padding:4px 0">Price</td><td style="color:var(--charcoal);font-weight:600">₹109/issue · ₹1090/yr</td></tr>
+        </table>
+      </div>
+      <div style="background:var(--ivory);border-radius:8px;padding:20px;border:1px solid var(--border)">
+        <h4 style="font-weight:700;color:var(--navy);margin-bottom:12px;font-size:14px">🏢 Publisher &amp; Printer</h4>
+        <table style="width:100%;font-size:13px;border-collapse:collapse">
+          <tr><td style="color:var(--slate);padding:4px 0;width:38%">Editor</td><td style="color:var(--charcoal);font-weight:600">Heta Supath Mohile</td></tr>
+          <tr><td style="color:var(--slate);padding:4px 0">Publisher</td><td style="color:var(--charcoal);font-weight:600">Heta Supath Mohile</td></tr>
+          <tr><td style="color:var(--slate);padding:4px 0">Address</td><td style="color:var(--charcoal);font-weight:600">G-403, Vishwas City-5, Gota, Ahmedabad-382481</td></tr>
+          <tr><td style="color:var(--slate);padding:4px 0">Printed at</td><td style="color:var(--charcoal);font-weight:600">Capital Offset, 801/1 GIDC Sector-28, Gandhinagar-382028</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-sec">
+  <div class="wrap">
+    <div class="sec-header" style="margin-bottom:36px">
+      <div class="sec-label inv"><div><h2>Our Editorial Principles</h2><p>What guides every article we publish</p></div></div>
+    </div>
+    <div class="values-grid">
+      <div class="val-card"><div class="val-ico">🎯</div><h4>Accurate &amp; Verified</h4><p>Every service rule, GR, transfer order, and court judgment we publish is verified from official sources before printing.</p></div>
+      <div class="val-card"><div class="val-ico">🇮🇳</div><h4>Gujarat-First</h4><p>We focus exclusively on Gujarat government employees. No national fluff — only what matters to you in your daily service life.</p></div>
+      <div class="val-card"><div class="val-ico">💡</div><h4>Practical &amp; Useful</h4><p>Every article answers a real question: "What does this mean for me?" Service rules, rulings, and orders explained plainly.</p></div>
+      <div class="val-card"><div class="val-ico">⚖️</div><h4>Employee Rights First</h4><p>We believe every government employee should know their rights — regarding leave, transfer, pension, RTI, and disciplinary matters.</p></div>
+      <div class="val-card"><div class="val-ico">🔍</div><h4>Vigilance Coverage</h4><p>ACB cases and corruption matters are covered fairly, factually, and without sensationalism — because accountability matters.</p></div>
+      <div class="val-card"><div class="val-ico">📖</div><h4>Accessible to All</h4><p>₹109 per issue ensures that every government employee — from peon to principal secretary — can afford to stay informed.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-sq" style="margin-bottom:14px;">OB</div>
+        <p>OFFICE BANDHHU is Gujarat's dedicated monthly magazine for state government employees — covering transfers, promotions, service rules, RTI, NPS, court judgments, and ACB cases.</p>
+        <div class="foot-social"><a href="https://www.instagram.com/officebandhhu" target="_blank" class="soc-btn">ig</a><a href="https://www.youtube.com/@officebandhhu" target="_blank" class="soc-btn">yt</a><a href="mailto:officebandhhu@gmail.com" class="soc-btn">✉</a></div>
+      </div>
+      <div class="foot-col"><h4>Topics</h4><ul class="foot-links"><li><a href="articles.html">Transfers &amp; Promotions</a></li><li><a href="articles.html">RTI Special</a></li><li><a href="articles.html">NPS / Pension</a></li><li><a href="articles.html">Service Rules</a></li><li><a href="articles.html">Court Judgments</a></li><li><a href="articles.html">ACB / Vigilance</a></li></ul></div>
+      <div class="foot-col"><h4>Magazine</h4><ul class="foot-links"><li><a href="magazine.html">Current Issue</a></li><li><a href="magazine.html">Archive</a></li><li><a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a></li><li><a href="contact.html">Advertise</a></li></ul></div>
+      <div class="foot-col"><h4>Contact</h4><ul class="foot-links"><li><a href="about.html">About Us</a></li><li><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a></li></ul><div style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.4);line-height:1.8">officebandhhu@gmail.com<br>+91 92134 62631<br>G-403, Vishwas City-5, Gota<br>Ahmedabad – 382481</div></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OFFICE BANDHHU · PRGI No. GJGUJ/26/A3280 · Edited &amp; Published by Heta Supath Mohile · Printed at Capital Offset, Gandhinagar</span>
+      <div class="foot-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="login-overlay" id="loginModal">
+  <div class="login-box">
+    <button class="lb-close" onclick="closeLogin()">✕</button>
+    <div class="lb-logo">
+      <div class="logo-sq" style="margin:0 auto 10px;width:42px;height:42px;font-size:16px">OB</div>
+      <div class="lb-brand">OFFICE BANDHHU</div>
+      <div class="lb-tagline" data-gu="સભ્ય પ્રવેશ" data-en="Subscriber Access">સભ્ય પ્રવેશ</div>
+    </div>
+    <div id="loginStep1">
+      <p class="lb-desc">Enter your registered mobile number to receive a one-time password</p>
+      <div class="mobile-input-row">
+        <span class="mob-prefix">🇮🇳 +91</span>
+        <input type="tel" id="mobileInput" class="mob-field" placeholder="10-digit mobile" maxlength="10" inputmode="numeric">
+      </div>
+      <div id="mobileErr" class="field-err"></div>
+      <button class="btn-primary lb-btn" onclick="sendOTP()" data-gu="OTP મોકલો →" data-en="Send OTP →">OTP મોકલો →</button>
+      <div class="lb-divider"></div>
+      <p class="lb-note">Subscriber-only access. <a href="subscribe.html">Subscribe here</a> to get login access.</p>
+    </div>
+    <div id="loginStep2" style="display:none">
+      <p class="lb-desc">OTP sent to +91 <strong id="mobileDisp"></strong></p>
+      <div class="demo-otp-notice" id="otpDemoMsg"></div>
+      <input type="tel" id="otpInput" class="otp-field" placeholder="000000" maxlength="6" inputmode="numeric">
+      <div id="otpErr" class="field-err"></div>
+      <button class="btn-primary lb-btn" onclick="verifyOTP()" data-gu="ચકાસો અને લોગઇન →" data-en="Verify &amp; Login →">ચકાસો અને લોગઇન →</button>
+      <div class="lb-links">
+        <a onclick="resendOTP()">↻ Resend OTP</a>
+        <span style="color:var(--border)">|</span>
+        <a onclick="changeNumber()">← Change Number</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

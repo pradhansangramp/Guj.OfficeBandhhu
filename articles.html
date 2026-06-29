@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles — OFFICE BANDHHU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <span>📅 Vol. 1, Issue 1 · June 2026 &nbsp;·&nbsp; First Edition · ₹109</span>
+    <div class="util-social">
+      <a href="mailto:officebandhhu@gmail.com">Email</a>
+      <a href="https://www.instagram.com/officebandhhu" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@officebandhhu" target="_blank">YouTube</a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="wrap">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">
+        <div class="logo-sq">OB</div>
+        <div class="logo-text"><span class="brand">OFFICE BANDHHU</span><span class="tagline" data-gu="ગુજરાત સરકારી કર્મચારીઓ માટેનું મેગેઝિન" data-en="Gujarat Govt Employees' Magazine">ગુજરાત સરકારી કર્મચારીઓ માટેનું મેગેઝિન</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="articles.html" class="active" data-gu="લેખો" data-en="Articles">લેખો</a></li>
+        <li><a href="magazine.html" data-gu="મેગેઝિન" data-en="Magazine">મેગેઝિન</a></li>
+        <li><a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a></li>
+        <li><a href="about.html" data-gu="અમારા વિશે" data-en="About">અમારા વિશે</a></li>
+        <li><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="langToggle" class="btn-lang" onclick="toggleLang()">🌐 English</button>
+        <span id="userBadge" class="user-badge" style="display:none"></span>
+        <a href="subscribe.html" class="btn-sub-nav" data-gu="સભ્ય બનો ₹109" data-en="Subscribe ₹109">સભ્ય બનો ₹109</a>
+        <button id="loginBtn" class="btn-login-outline" onclick="openLoginModal()" data-gu="લોગઇન" data-en="Login">લોગઇન</button>
+        <button id="logoutBtn" class="btn-logout" style="display:none" onclick="logout()" data-gu="લોગ આઉટ" data-en="Logout">લોગ આઉટ</button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="articles.html" class="active" data-gu="લેખો" data-en="Articles">લેખો</a><a href="magazine.html" data-gu="મેગેઝિન" data-en="Magazine">મેગેઝિન</a>
+    <a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a><a href="about.html" data-gu="અમારા વિશે" data-en="About">અમારા વિશે</a><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a>
+    <a href="#" onclick="openLoginModal();return false;" style="color:var(--saffron);font-weight:700" data-gu="લોગઇન / મારો ખાતો" data-en="Login / My Account">લોગઇન / મારો ખાતો</a>
+  </div>
+</nav>
+
+<!-- PAGE BANNER -->
+<div class="page-banner">
+  <div class="wrap">
+    <div class="eyebrow">Articles</div>
+    <h1>Service Updates &amp; Insights</h1>
+    <p>Transfers, promotions, RTI, NPS, service rules, court judgments, and ACB cases — everything a Gujarat government employee needs to stay informed.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,.7)">Articles</span></div>
+  </div>
+</div>
+
+<!-- ARTICLES -->
+<section style="padding:60px 0;background:var(--white)">
+  <div class="wrap">
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" onclick="switchTab(this,'t-transfer')" role="tab">Transfers &amp; Promotions</button>
+      <button class="tab-btn" onclick="switchTab(this,'t-rti')" role="tab">RTI Special</button>
+      <button class="tab-btn" onclick="switchTab(this,'t-nps')" role="tab">NPS / Pension</button>
+      <button class="tab-btn" onclick="switchTab(this,'t-service')" role="tab">Service Rules</button>
+      <button class="tab-btn" onclick="switchTab(this,'t-court')" role="tab">Court Judgments</button>
+      <button class="tab-btn" onclick="switchTab(this,'t-acb')" role="tab">ACB / Vigilance</button>
+    </div>
+
+    <!-- TRANSFERS & PROMOTIONS -->
+    <div id="t-transfer" class="tab-pane active">
+      <div class="arts-grid">
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img"><div class="cat-badge">IAS Transfer</div></div>
+          <div class="art-body"><h4>72 IAS Officers: Gujarat Mass Transfer Order of 13 May 2026</h4><p>Sweeping reshuffle across Gujarat administration — secretariat changes, new postings, and key appointments.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v2"><div class="cat-badge">Secretariat</div></div>
+          <div class="art-body"><h4>21 Secretariat Officers Transferred — 39 Promoted to Deputy Secretary</h4><p>Major Secretariat-level changes following the May 2026 transfer orders. Full list of transfers and promotions.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v3"><div class="cat-badge">Forest Service</div></div>
+          <div class="art-body"><h4>37 SFS Officers Promoted to IFS Cadre — UPSC Select List 2025</h4><p>State Forest Service officers elevated to the Indian Forest Service through the UPSC Select List 2025.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v4"><div class="cat-badge">Panchayat</div></div>
+          <div class="art-body"><h4>Panchayat Department: District-Level Transfer Orders — June 2026</h4><p>Summary of transfers and new appointments in district panchayat offices across Gujarat.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v5"><div class="cat-badge">Education</div></div>
+          <div class="art-body"><h4>HTAT: Academic Session-End Retirement Benefit Now Available</h4><p>Head Teachers and teachers approaching retirement can now avail end-of-session retirement benefit under the new rule.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v6"><div class="cat-badge">Revenue</div></div>
+          <div class="art-body"><h4>Revenue Department: Talati and Circle Officer Promotions — May–June 2026</h4><p>Promotion orders issued for Talati-cum-Mantri and Circle Officers across revenue divisions.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- RTI SPECIAL -->
+    <div id="t-rti" class="tab-pane">
+      <div class="arts-grid">
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v3"><div class="cat-badge">RTI Ruling</div></div>
+          <div class="art-body"><h4>Aravalli Case: Information Commission Imposes ₹10,000 Personal Fine on Mamlatdar</h4><p>Gujarat Information Commission ruling — PIOs cannot ignore RTI requests. Landmark fine sets strong precedent.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v4"><div class="cat-badge">RTI Guide</div></div>
+          <div class="art-body"><h4>How to File an RTI: Step-by-Step Guide for Government Employees</h4><p>Complete practical guide for filing RTI applications — forms, fees, timelines, and appeal process.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v5"><div class="cat-badge">PIO Duties</div></div>
+          <div class="art-body"><h4>Record Loss Affidavit: What a Public Information Officer Must Do</h4><p>When records are lost or unavailable, what obligation does the PIO have under the RTI Act? Full legal analysis.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- NPS / PENSION -->
+    <div id="t-nps" class="tab-pane">
+      <div class="arts-grid">
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img"><div class="cat-badge">NPS Pension</div></div>
+          <div class="art-body"><h4>NPS Family Pension: Full Eligibility Guide for Gujarat Govt Employees</h4><p>By Sri Haresh Joshi (Retd. Dy. Director, Accounts) — who qualifies, what documents needed, and how to apply.</p><div class="art-meta"><span>Sri Haresh Joshi</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v2"><div class="cat-badge">DA Revision</div></div>
+          <div class="art-body"><h4>DA Increased to 60% from 01/01/2026 — How to Calculate Your 4-Month Arrears</h4><p>Step-by-step calculation guide for the revised Dearness Allowance, with examples for different pay scales.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v4"><div class="cat-badge">Contribution</div></div>
+          <div class="art-body"><h4>NPS Contribution Reconciliation: Fixing Errors in Your Pension Account</h4><p>Common NPS reconciliation issues and how to get them corrected through your DDO and NSDL.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- SERVICE RULES -->
+    <div id="t-service" class="tab-pane">
+      <div class="arts-grid">
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v5"><div class="cat-badge">Leave Rules</div></div>
+          <div class="art-body"><h4>Casual Leave: 8 Days at One Time Is Allowed — GR dated 06-02-1961</h4><p>Full text and interpretation of the GR permitting 8 consecutive casual leave days for Gujarat government employees.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v6"><div class="cat-badge">IFMS Alert</div></div>
+          <div class="art-body"><h4>IFMS "Pull Back" Feature Removed — Check Bills Before Submission</h4><p>The option to reverse submitted bills in IFMS has been discontinued. What employees and DDOs must do now.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v3"><div class="cat-badge">HTAT</div></div>
+          <div class="art-body"><h4>HTAT Retirement: Academic Session-End Benefit — Full Details</h4><p>New benefit available to HTAT-grade teachers retiring at the end of an academic session — eligibility and process.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- COURT JUDGMENTS -->
+    <div id="t-court" class="tab-pane">
+      <div class="arts-grid">
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v4"><div class="cat-badge">HC Judgment</div></div>
+          <div class="art-body"><h4>Gujarat HC: Compulsory Retirement — Validity and Employee Rights (Sept 2025)</h4><p>High Court ruling on the procedural requirements for valid compulsory retirement orders — landmark for disciplinary cases.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v2"><div class="cat-badge">Regularisation</div></div>
+          <div class="art-body"><h4>Gujarat HC: Daily-Wage Regularisation — March 2026 Judgment</h4><p>Landmark ruling on the rights of daily-wage workers employed in government service seeking regularisation.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v6"><div class="cat-badge">Contract Staff</div></div>
+          <div class="art-body"><h4>Contractual Counsellors in Govt Schools: Job Security Ruling Explained</h4><p>HC judgment on the service conditions of contractual counsellors — implications for contract staff across departments.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ACB / VIGILANCE -->
+    <div id="t-acb" class="tab-pane">
+      <div class="arts-grid">
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v3"><div class="cat-badge">ACB Trap</div></div>
+          <div class="art-body"><h4>Anand Hospital Bribery Case: ACB Trap — June 2026</h4><p>Details of the ACB trap case in Anand district involving a hospital sector official. Charges, arrest, and current status.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v4"><div class="cat-badge">ACB</div></div>
+          <div class="art-body"><h4>Gandhinagar: Electrical Inspector Caught in ACB Trap — June 2026</h4><p>ACB operation details in Gandhinagar — the department, bribe amount, and case status.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+        <a class="art-card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="art-img v5"><div class="cat-badge">Bharuch ACB</div></div>
+          <div class="art-body"><h4>Bharuch Talati: ACB Trap for Accepting Bribe — Case Summary</h4><p>Revenue department Talati caught in ACB trap in Bharuch district — complete case details and implications.</p><div class="art-meta"><span>June 2026</span><span class="dot"></span><span>🔒 Subscribers</span></div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <a href="#" class="pg-btn active">1</a>
+      <a href="#" class="pg-btn">2</a>
+      <a href="#" class="pg-btn">→</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="nl-sec">
+  <div class="wrap">
+    <div class="nl-inner">
+      <div class="nl-text"><h2>Never Miss an Important Update</h2><p>Government circulars, transfer orders, and service rule changes — summarised and sent to your inbox every month.</p></div>
+      <div class="nl-form">
+        <input type="email" class="nl-input" placeholder="Enter your email" id="nlEmail">
+        <button class="btn-nl" onclick="handleNL()">Subscribe Free →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-sq" style="margin-bottom:14px;">OB</div>
+        <p>OFFICE BANDHHU is Gujarat's dedicated monthly magazine for state government employees — covering transfers, promotions, service rules, RTI, NPS, court judgments, and ACB cases.</p>
+        <div class="foot-social"><a href="https://www.instagram.com/officebandhhu" target="_blank" class="soc-btn">ig</a><a href="https://www.youtube.com/@officebandhhu" target="_blank" class="soc-btn">yt</a><a href="mailto:officebandhhu@gmail.com" class="soc-btn">✉</a></div>
+      </div>
+      <div class="foot-col"><h4>Topics</h4><ul class="foot-links"><li><a href="articles.html">Transfers &amp; Promotions</a></li><li><a href="articles.html">RTI Special</a></li><li><a href="articles.html">NPS / Pension</a></li><li><a href="articles.html">Service Rules</a></li><li><a href="articles.html">Court Judgments</a></li><li><a href="articles.html">ACB / Vigilance</a></li></ul></div>
+      <div class="foot-col"><h4>Magazine</h4><ul class="foot-links"><li><a href="magazine.html">Current Issue</a></li><li><a href="magazine.html">Archive</a></li><li><a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a></li><li><a href="contact.html">Advertise</a></li></ul></div>
+      <div class="foot-col"><h4>Contact</h4><ul class="foot-links"><li><a href="about.html">About Us</a></li><li><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a></li></ul><div style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.4);line-height:1.8">officebandhhu@gmail.com<br>+91 92134 62631<br>G-403, Vishwas City-5, Gota<br>Ahmedabad – 382481</div></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OFFICE BANDHHU · PRGI No. GJGUJ/26/A3280 · Edited &amp; Published by Heta Supath Mohile</span>
+      <div class="foot-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="login-overlay" id="loginModal">
+  <div class="login-box">
+    <button class="lb-close" onclick="closeLogin()">✕</button>
+    <div class="lb-logo">
+      <div class="logo-sq" style="margin:0 auto 10px;width:42px;height:42px;font-size:16px">OB</div>
+      <div class="lb-brand">OFFICE BANDHHU</div>
+      <div class="lb-tagline" data-gu="સભ્ય પ્રવેશ" data-en="Subscriber Access">સભ્ય પ્રવેશ</div>
+    </div>
+    <div id="loginStep1">
+      <p class="lb-desc">Enter your registered mobile number to receive a one-time password</p>
+      <div class="mobile-input-row">
+        <span class="mob-prefix">🇮🇳 +91</span>
+        <input type="tel" id="mobileInput" class="mob-field" placeholder="10-digit mobile" maxlength="10" inputmode="numeric">
+      </div>
+      <div id="mobileErr" class="field-err"></div>
+      <button class="btn-primary lb-btn" onclick="sendOTP()" data-gu="OTP મોકલો →" data-en="Send OTP →">OTP મોકલો →</button>
+      <div class="lb-divider"></div>
+      <p class="lb-note">Subscriber-only access. <a href="subscribe.html">Subscribe here</a> to get login access.</p>
+    </div>
+    <div id="loginStep2" style="display:none">
+      <p class="lb-desc">OTP sent to +91 <strong id="mobileDisp"></strong></p>
+      <div class="demo-otp-notice" id="otpDemoMsg"></div>
+      <input type="tel" id="otpInput" class="otp-field" placeholder="000000" maxlength="6" inputmode="numeric">
+      <div id="otpErr" class="field-err"></div>
+      <button class="btn-primary lb-btn" onclick="verifyOTP()" data-gu="ચકાસો અને લોગઇન →" data-en="Verify &amp; Login →">ચકાસો અને લોગઇન →</button>
+      <div class="lb-links">
+        <a onclick="resendOTP()">↻ Resend OTP</a>
+        <span style="color:var(--border)">|</span>
+        <a onclick="changeNumber()">← Change Number</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

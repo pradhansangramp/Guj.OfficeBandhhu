@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magazine — OFFICE BANDHHU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <span>📅 Vol. 1, Issue 1 · June 2026 &nbsp;·&nbsp; First Edition · ₹109</span>
+    <div class="util-social">
+      <a href="mailto:officebandhhu@gmail.com">Email</a>
+      <a href="https://www.instagram.com/officebandhhu" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@officebandhhu" target="_blank">YouTube</a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="wrap">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">
+        <div class="logo-sq">OB</div>
+        <div class="logo-text"><span class="brand">OFFICE BANDHHU</span><span class="tagline" data-gu="ગુજરાત સરકારી કર્મચારીઓ માટેનું મેગેઝિન" data-en="Gujarat Govt Employees' Magazine">ગુજરાત સરકારી કર્મચારીઓ માટેનું મેગેઝિન</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="articles.html" data-gu="લેખો" data-en="Articles">લેખો</a></li>
+        <li><a href="magazine.html" class="active" data-gu="મેગેઝિન" data-en="Magazine">મેગેઝિન</a></li>
+        <li><a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a></li>
+        <li><a href="about.html" data-gu="અમારા વિશે" data-en="About">અમારા વિશે</a></li>
+        <li><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="langToggle" class="btn-lang" onclick="toggleLang()">🌐 English</button>
+        <span id="userBadge" class="user-badge" style="display:none"></span>
+        <a href="subscribe.html" class="btn-sub-nav" data-gu="સભ્ય બનો ₹109" data-en="Subscribe ₹109">સભ્ય બનો ₹109</a>
+        <button id="loginBtn" class="btn-login-outline" onclick="openLoginModal()" data-gu="લોગઇન" data-en="Login">લોગઇન</button>
+        <button id="logoutBtn" class="btn-logout" style="display:none" onclick="logout()" data-gu="લોગ આઉટ" data-en="Logout">લોગ આઉટ</button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="articles.html" data-gu="લેખો" data-en="Articles">લેખો</a><a href="magazine.html" class="active" data-gu="મેગેઝિન" data-en="Magazine">મેગેઝિન</a>
+    <a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a><a href="about.html" data-gu="અમારા વિશે" data-en="About">અમારા વિશે</a><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a>
+    <a href="#" onclick="openLoginModal();return false;" style="color:var(--saffron);font-weight:700" data-gu="લોગઇન / મારો ખાતો" data-en="Login / My Account">લોગઇન / મારો ખાતો</a>
+  </div>
+</nav>
+
+<!-- PAGE BANNER -->
+<div class="page-banner">
+  <div class="wrap">
+    <div class="eyebrow">Magazine</div>
+    <h1>OFFICE BANDHHU Issues</h1>
+    <p>🔒 Magazine access is for subscribers only. Login with your registered mobile number to read any issue.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,.7)">Magazine</span></div>
+  </div>
+</div>
+
+<!-- CURRENT ISSUE -->
+<section style="padding:52px 0;background:var(--ivory)">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="sec-label"><div><h2>Latest Issue</h2><p>Vol. 1, Issue 1 · June 2026 · First Edition</p></div></div>
+      <a href="subscribe.html" class="btn-all">Subscribe for Access →</a>
+    </div>
+    <div style="background:var(--navy);border-radius:12px;padding:36px 40px;display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:center">
+      <div style="text-align:center">
+        <div style="display:inline-block;background:var(--white);border-radius:3px;overflow:hidden;box-shadow:12px 12px 40px rgba(0,0,0,.5);transform:rotate(-2deg)">
+          <div style="background:var(--saffron);padding:11px 14px 8px"><div style="font-family:'Playfair Display',serif;font-size:13px;font-weight:900;color:var(--navy)">OFFICE BANDHHU</div><div style="font-size:8px;color:var(--navy);opacity:.7;text-transform:uppercase;letter-spacing:.5px">Vol. 1 · Issue 1 · June 2026</div></div>
+          <div style="padding:12px 14px;background:#fff"><div style="font-family:'Playfair Display',serif;font-size:9px;font-weight:700;color:var(--navy);margin-bottom:8px">72 IAS Officers Mass Transfer — June 2026</div><div style="border-top:1px solid #eee;padding-top:7px"><p style="font-size:7px;color:#6b7280;padding:2px 0;border-bottom:1px dotted #eee">→ NPS Family Pension Guide</p><p style="font-size:7px;color:#6b7280;padding:2px 0;border-bottom:1px dotted #eee">→ RTI: ₹10,000 Fine on Mamlatdar</p><p style="font-size:7px;color:#6b7280;padding:2px 0">→ DA 60% + Arrears</p></div></div>
+          <div style="background:var(--navy);padding:5px 14px;font-size:7px;color:rgba(255,255,255,.4);text-align:center">PRGI: GJGUJ/26/A3280 · ₹109</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--saffron);margin-bottom:12px">🏆 Inaugural Issue</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--white);line-height:1.2;margin-bottom:12px">June 2026 — Vol. 1, Issue 1</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:22px">Gujarat's first magazine exclusively for government employees. Covers the 72-IAS transfer order, NPS pension rights, RTI Commission rulings, DA revision to 60%, ACB trap cases, and Gujarat HC court judgments — all in one place.</p>
+        <div style="background:rgba(245,162,0,.1);border:1px solid rgba(245,162,0,.3);border-radius:6px;padding:12px 16px;margin-bottom:20px;font-size:13px;color:rgba(255,255,255,.7)">
+          🔒 <strong style="color:var(--saffron)">Login required to read.</strong> Subscribers login with their registered mobile number and OTP.
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button onclick="openViewer('june2026')" class="btn-primary">Read June Issue →</button>
+          <a href="subscribe.html" class="btn-outline">Subscribe for Full Access</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHIVE -->
+<section class="archive-sec">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="sec-label inv"><div><h2>Issue Archive</h2><p>🔒 Login to read any issue</p></div></div>
+    </div>
+    <div class="issues-grid">
+      <div class="issue-card" onclick="openViewer('june2026')">
+        <div class="issue-cover">
+          <div class="ic-latest">Latest</div>
+          <div class="ic-top"><div class="ic-brand">OFFICE BANDHHU</div><div class="ic-mo">June 2026 · Vol.1 No.1</div></div>
+          <div class="ic-body"><div class="ic-title">72 IAS Transfer · NPS Guide · RTI Ruling</div><div class="ic-stripe"></div><div class="ic-desc">DA 60% · ACB Cases · HC Judgments</div></div>
+          <div class="ic-foot">🔒 Subscriber Access</div>
+        </div>
+        <div class="issue-label"><div class="il-name">June 2026</div><div class="il-vol">Vol. 1, Issue 1 · First Edition</div></div>
+      </div>
+      <!-- Future issues placeholder -->
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;opacity:.45">
+        <div style="width:100%;background:rgba(255,255,255,.08);border-radius:3px;padding:40px 10px;margin-bottom:9px;border:1px dashed rgba(255,255,255,.2)">
+          <div style="font-size:24px;margin-bottom:8px">📖</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.5)">July 2026 Issue<br>Coming Soon</div>
+        </div>
+        <div class="issue-label"><div class="il-name">July 2026</div><div class="il-vol">Vol. 1, Issue 2</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;opacity:.3">
+        <div style="width:100%;background:rgba(255,255,255,.06);border-radius:3px;padding:40px 10px;margin-bottom:9px;border:1px dashed rgba(255,255,255,.15)">
+          <div style="font-size:24px;margin-bottom:8px">📖</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.4)">Aug 2026 Issue<br>Coming Soon</div>
+        </div>
+        <div class="issue-label"><div class="il-name">Aug 2026</div><div class="il-vol">Vol. 1, Issue 3</div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <p style="font-size:15px;color:rgba(255,255,255,.5);margin-bottom:18px">New issues published every month. Subscribe to receive each one.</p>
+      <a href="subscribe.html" class="btn-primary" style="margin-right:12px">Subscribe Now ₹1090/yr</a>
+      <a href="contact.html" class="btn-outline" style="display:inline-block">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- MAGAZINE VIEWER MODAL -->
+<div class="modal-bg" id="magModal" onclick="handleModalClick(event)">
+  <div class="mag-viewer">
+    <div class="vw-header">
+      <div class="vw-title">OFFICE BANDHHU &nbsp;·&nbsp; <span id="vwIssueName">June 2026</span></div>
+      <button class="vw-close" onclick="closeViewer()" aria-label="Close">✕</button>
+    </div>
+    <div class="vw-toolbar">
+      <div class="vw-nav">
+        <button class="btn-pg" id="btnPrev" onclick="changePg(-1)" disabled>← Prev</button>
+        <span class="pg-ind" id="pgInd">Page 1 of 5</span>
+        <button class="btn-pg" id="btnNext" onclick="changePg(1)">Next →</button>
+      </div>
+      <div class="vw-badge">👁 Preview — Subscribe to Download PDF</div>
+    </div>
+    <div class="vw-body">
+
+      <!-- PAGE 1: Cover -->
+      <div class="mag-pg active" id="vp1">
+        <div class="pg-cover">
+          <div class="pgc-header">
+            <div class="pgc-brand">OFFICE BANDHHU</div>
+            <div class="pgc-detail">Vol. 1 · Issue 1<br>June 2026<br>₹109</div>
+          </div>
+          <div class="pgc-hero">
+            <div>
+              <div class="pgc-vol">Inaugural Issue · ગુજરાત સરકારી કર્મચારી</div>
+              <h2>72 IAS Officers — Mass Transfer Order</h2>
+              <p>Transfers · Promotions · RTI · NPS · Service Rules · Court Judgments · ACB Cases</p>
+            </div>
+          </div>
+          <div class="pgc-toc">
+            <div class="toc-item"><div class="toc-num">4</div><div class="toc-text"><h5>IAS Transfer Order</h5><p>72 officers reshuffled, 13 May 2026</p></div></div>
+            <div class="toc-item"><div class="toc-num">8</div><div class="toc-text"><h5>NPS Pension Guide</h5><p>Family pension eligibility — full details</p></div></div>
+            <div class="toc-item"><div class="toc-num">12</div><div class="toc-text"><h5>RTI Case: Aravalli</h5><p>₹10,000 fine imposed on Mamlatdar</p></div></div>
+            <div class="toc-item"><div class="toc-num">16</div><div class="toc-text"><h5>DA Revised to 60%</h5><p>Effective 01/01/2026 — 4-month arrears</p></div></div>
+            <div class="toc-item"><div class="toc-num">20</div><div class="toc-text"><h5>ACB Trap Cases</h5><p>June 2026 across Gujarat</p></div></div>
+            <div class="toc-item"><div class="toc-num">24</div><div class="toc-text"><h5>HC Judgments</h5><p>Compulsory retirement &amp; daily wage cases</p></div></div>
+          </div>
+          <div class="pgc-footer"><span>officebandhhu@gmail.com · +91 92134 62631</span><span>PRGI: GJGUJ/26/A3280</span></div>
+        </div>
+      </div>
+
+      <!-- PAGE 2: Governor Message + Editorial -->
+      <div class="mag-pg" id="vp2">
+        <div class="art-page">
+          <div style="font-size:10px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px">Message · Page 2</div>
+          <h3>Governor Acharya Devvrat's Message</h3>
+          <div class="art-byline"><span>Raj Bhavan, Gujarat</span><span>·</span><span>27 May 2026</span></div>
+          <p>The Governor of Gujarat, Sri Acharya Devvrat, addressed a message to Gujarat's government employees on the occasion of the launch of OFFICE BANDHHU — acknowledging the vital role of government servants in the state's administration and development.</p>
+          <div class="pullquote">"A well-informed government employee is the foundation of efficient public administration. OFFICE BANDHHU fills an important gap by bringing critical service-related information to every government servant in Gujarat."</div>
+          <div style="font-size:10px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:2px;margin:20px 0 10px">Editorial · Page 3</div>
+          <h3>Rashtradharm Mate Karkasarta</h3>
+          <div class="art-byline"><span>By Heta Supath Mohile</span><span>·</span><span>Editor &amp; Publisher</span></div>
+          <p>As we launch the first issue of OFFICE BANDHHU, our mission is clear: every Gujarat government employee deserves timely, accurate, and useful information about matters that directly affect their service life — from transfers and promotions to pension rights and court rulings.</p>
+          <p>This magazine is dedicated to the 5 lakh+ government employees of Gujarat who serve the state with dedication every day. We will be your monthly companion for staying informed, protected, and empowered in your service.</p>
+        </div>
+      </div>
+
+      <!-- PAGE 3: IAS Transfer -->
+      <div class="mag-pg" id="vp3">
+        <div class="art-page">
+          <div style="font-size:10px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px">Transfers &amp; Promotions · Page 4</div>
+          <h3>72 IAS Officers: Gujarat's Mass Transfer Order of 13 May 2026</h3>
+          <div class="art-byline"><span>Staff Reporter</span><span>·</span><span>June 2026 Issue</span></div>
+          <p>In one of the largest administrative reshuffles in recent years, the Gujarat government issued a mass transfer order on 13 May 2026 affecting 72 IAS officers across the state. The order included major changes at the Secretariat level, with 21 officers transferred and 39 promoted to the rank of Deputy Secretary.</p>
+          <p>Additionally, 37 officers from the State Forest Service (SFS) were promoted to the Indian Forest Service (IFS) cadre through the UPSC Select List 2025, marking a significant career milestone for state service officers.</p>
+          <div class="stats-box">
+            <div class="sb-head">📊 Transfer Order — Key Numbers</div>
+            <div class="stats-grid-2">
+              <div class="stat-item"><div class="stat-num">72</div><div class="stat-label">IAS officers transferred</div></div>
+              <div class="stat-item"><div class="stat-num">39</div><div class="stat-label">Promoted to Deputy Secretary</div></div>
+              <div class="stat-item"><div class="stat-num">21</div><div class="stat-label">Secretariat reshuffles</div></div>
+              <div class="stat-item"><div class="stat-num">37</div><div class="stat-label">SFS promoted to IFS cadre</div></div>
+            </div>
+          </div>
+          <p>Full posting details and the complete list of transferred officers are available in the print edition. Subscribe or contact us for the full report.</p>
+        </div>
+      </div>
+
+      <!-- PAGE 4: NPS + RTI + DA -->
+      <div class="mag-pg" id="vp4">
+        <div class="art-page">
+          <div style="font-size:10px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px">NPS / Pension · RTI · Service Rules · Page 8–16</div>
+          <h3>NPS Family Pension — Complete Eligibility Guide</h3>
+          <div class="art-byline"><span>Sri Haresh Joshi</span><span>·</span><span>Retired Dy. Director (Accounts)</span></div>
+          <p>Under the National Pension Scheme (NPS), family members of deceased government employees are entitled to pension benefits under specific conditions. This guide, prepared by retired Dy. Director of Accounts Sri Haresh Joshi, covers the full eligibility criteria, documentation required, and the application process for Gujarat government employees.</p>
+          <div class="pullquote">DA Increased to 60% effective 01/01/2026 — arrears of 4 months to be credited before July 2026</div>
+          <p><strong style="color:var(--navy)">RTI Case:</strong> The Information Commission imposed a personal fine of ₹10,000 on the Mamlatdar in the Aravalli case for failure to provide information under RTI within the stipulated 30-day period. This landmark ruling reinforces the obligation of public information officers.</p>
+          <p><strong style="color:var(--navy)">Casual Leave Rule (GR dated 06-02-1961):</strong> Government employees may avail up to 8 consecutive days of casual leave at one time. The IFMS "Pull Back" feature has been removed — employees should verify their bills before final submission as the reversal option is no longer available.</p>
+        </div>
+      </div>
+
+      <!-- PAGE 5: ACB + HC Judgments + Quiz Preview -->
+      <div class="mag-pg" id="vp5">
+        <div class="art-page">
+          <div style="font-size:10px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px">ACB Cases · Court Judgments · Page 20–27</div>
+          <h3>ACB Trap Cases — June 2026 Across Gujarat</h3>
+          <div class="art-byline"><span>Staff Reporter</span><span>·</span><span>ACB / Vigilance</span></div>
+          <p>The Anti-Corruption Bureau recorded multiple trap cases across Gujarat in the month of June 2026. Cases were filed in Anand (hospital sector), Gandhinagar (department official), Bharuch (Talati), and other districts. Names, posts, bribe amounts, and current status are detailed in the full print issue.</p>
+          <div style="background:var(--ivory);border-radius:6px;padding:16px;margin:18px 0">
+            <div style="font-size:11px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">⚖️ Gujarat HC Judgments — Summary</div>
+            <p style="font-size:13px;color:var(--charcoal);line-height:1.7;margin-bottom:8px"><strong>Compulsory Retirement Case (Sept 2025 judgment):</strong> HC ruled on the validity of compulsory retirement orders — key implications for employees facing disciplinary action.</p>
+            <p style="font-size:13px;color:var(--charcoal);line-height:1.7;margin-bottom:8px"><strong>Daily-Wage Regularisation (March 2026 judgment):</strong> Landmark verdict on the rights of daily-wage employees seeking regularisation — applicable across Gujarat departments.</p>
+            <p style="font-size:13px;color:var(--charcoal);line-height:1.7"><strong>Contractual Counsellors Case:</strong> Status of contractual counsellors employed in government schools — job security ruling.</p>
+          </div>
+          <div style="background:var(--navy);border-radius:6px;padding:16px;margin-top:18px;text-align:center">
+            <div style="font-size:12px;color:var(--saffron);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">📝 Administrative Knowledge Quiz</div>
+            <p style="font-size:13px;color:rgba(255,255,255,.7)">10 MCQ questions on Gujarat government service rules are included in the print edition. Answers will be published in the <strong style="color:var(--white)">July 2026 issue</strong>.</p>
+            <a href="subscribe.html" style="display:inline-block;margin-top:12px;background:var(--saffron);color:var(--navy);border-radius:4px;padding:9px 20px;font-size:13px;font-weight:700;text-decoration:none">Subscribe for Full Issue →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-sq" style="margin-bottom:14px;">OB</div>
+        <p>OFFICE BANDHHU is Gujarat's dedicated monthly magazine for state government employees — covering transfers, promotions, service rules, RTI, NPS, court judgments, and ACB cases.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/officebandhhu" target="_blank" class="soc-btn">ig</a>
+          <a href="https://www.youtube.com/@officebandhhu" target="_blank" class="soc-btn">yt</a>
+          <a href="mailto:officebandhhu@gmail.com" class="soc-btn">✉</a>
+        </div>
+      </div>
+      <div class="foot-col"><h4>Topics</h4><ul class="foot-links"><li><a href="articles.html">Transfers &amp; Promotions</a></li><li><a href="articles.html">RTI Special</a></li><li><a href="articles.html">NPS / Pension</a></li><li><a href="articles.html">Service Rules</a></li><li><a href="articles.html">Court Judgments</a></li><li><a href="articles.html">ACB / Vigilance</a></li></ul></div>
+      <div class="foot-col"><h4>Magazine</h4><ul class="foot-links"><li><a href="magazine.html">Current Issue</a></li><li><a href="magazine.html">Archive</a></li><li><a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a></li><li><a href="contact.html">Advertise</a></li></ul></div>
+      <div class="foot-col"><h4>Contact</h4><ul class="foot-links"><li><a href="about.html">About Us</a></li><li><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a></li></ul>
+      <div style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.4);line-height:1.8">officebandhhu@gmail.com<br>+91 92134 62631<br>G-403, Vishwas City-5, Gota<br>Ahmedabad – 382481</div></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OFFICE BANDHHU · PRGI No. GJGUJ/26/A3280 · Edited &amp; Published by Heta Supath Mohile · Printed at Capital Offset, Gandhinagar</span>
+      <div class="foot-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="login-overlay" id="loginModal">
+  <div class="login-box">
+    <button class="lb-close" onclick="closeLogin()">✕</button>
+    <div class="lb-logo">
+      <div class="logo-sq" style="margin:0 auto 10px;width:42px;height:42px;font-size:16px">OB</div>
+      <div class="lb-brand">OFFICE BANDHHU</div>
+      <div class="lb-tagline" data-gu="સભ્ય પ્રવેશ" data-en="Subscriber Access">સભ્ય પ્રવેશ</div>
+    </div>
+    <div id="loginStep1">
+      <p class="lb-desc">Enter your registered mobile number to receive a one-time password</p>
+      <div class="mobile-input-row">
+        <span class="mob-prefix">🇮🇳 +91</span>
+        <input type="tel" id="mobileInput" class="mob-field" placeholder="10-digit mobile" maxlength="10" inputmode="numeric">
+      </div>
+      <div id="mobileErr" class="field-err"></div>
+      <button class="btn-primary lb-btn" onclick="sendOTP()" data-gu="OTP મોકલો →" data-en="Send OTP →">OTP મોકલો →</button>
+      <div class="lb-divider"></div>
+      <p class="lb-note">Subscriber-only access. <a href="subscribe.html">Subscribe here</a> to get login access.</p>
+    </div>
+    <div id="loginStep2" style="display:none">
+      <p class="lb-desc">OTP sent to +91 <strong id="mobileDisp"></strong></p>
+      <div class="demo-otp-notice" id="otpDemoMsg"></div>
+      <input type="tel" id="otpInput" class="otp-field" placeholder="000000" maxlength="6" inputmode="numeric">
+      <div id="otpErr" class="field-err"></div>
+      <button class="btn-primary lb-btn" onclick="verifyOTP()" data-gu="ચકાસો અને લોગઇન →" data-en="Verify &amp; Login →">ચકાસો અને લોગઇન →</button>
+      <div class="lb-links">
+        <a onclick="resendOTP()">↻ Resend OTP</a>
+        <span style="color:var(--border)">|</span>
+        <a onclick="changeNumber()">← Change Number</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

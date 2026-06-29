@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscribe — OFFICE BANDHHU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <span>📅 Vol. 1, Issue 1 · June 2026 &nbsp;·&nbsp; First Edition · ₹109</span>
+    <div class="util-social">
+      <a href="mailto:officebandhhu@gmail.com">Email</a>
+      <a href="https://www.instagram.com/officebandhhu" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@officebandhhu" target="_blank">YouTube</a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="wrap">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">
+        <div class="logo-sq">OB</div>
+        <div class="logo-text"><span class="brand">OFFICE BANDHHU</span><span class="tagline" data-gu="ગુજરાત સરકારી કર્મચારીઓ માટેનું મેગેઝિન" data-en="Gujarat Govt Employees' Magazine">ગુજરાત સરકારી કર્મચારીઓ માટેનું મેગેઝિન</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="articles.html" data-gu="લેખો" data-en="Articles">લેખો</a></li>
+        <li><a href="magazine.html" data-gu="મેગેઝિન" data-en="Magazine">મેગેઝિન</a></li>
+        <li><a href="subscribe.html" class="active" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a></li>
+        <li><a href="about.html" data-gu="અમારા વિશે" data-en="About">અમારા વિશે</a></li>
+        <li><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="langToggle" class="btn-lang" onclick="toggleLang()">🌐 English</button>
+        <span id="userBadge" class="user-badge" style="display:none"></span>
+        <a href="subscribe.html" class="btn-sub-nav" data-gu="સભ્ય બનો ₹109" data-en="Subscribe ₹109">સભ્ય બનો ₹109</a>
+        <button id="loginBtn" class="btn-login-outline" onclick="openLoginModal()" data-gu="લોગઇન" data-en="Login">લોગઇન</button>
+        <button id="logoutBtn" class="btn-logout" style="display:none" onclick="logout()" data-gu="લોગ આઉટ" data-en="Logout">લોગ આઉટ</button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="articles.html" data-gu="લેખો" data-en="Articles">લેખો</a><a href="magazine.html" data-gu="મેગેઝિન" data-en="Magazine">મેગેઝિન</a>
+    <a href="subscribe.html" class="active" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a><a href="about.html" data-gu="અમારા વિશે" data-en="About">અમારા વિશે</a><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a>
+    <a href="#" onclick="openLoginModal();return false;" style="color:var(--saffron);font-weight:700" data-gu="લોગઇન / મારો ખાતો" data-en="Login / My Account">લોગઇન / મારો ખાતો</a>
+  </div>
+</nav>
+
+<!-- PAGE BANNER -->
+<div class="page-banner">
+  <div class="wrap">
+    <div class="eyebrow">Subscribe</div>
+    <h1>Join OFFICE BANDHHU</h1>
+    <p>Gujarat's only monthly magazine exclusively for government employees — ₹109 per issue, ₹1090 per year.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,.7)">Subscribe</span></div>
+  </div>
+</div>
+
+<!-- TRUST STRIP -->
+<div style="background:var(--white);border-bottom:1px solid var(--border);padding:18px 0">
+  <div class="wrap" style="display:flex;justify-content:center;gap:36px;flex-wrap:wrap;text-align:center">
+    <div style="font-size:13px;color:var(--slate)">✅ <strong style="color:var(--navy)">Monthly delivery</strong></div>
+    <div style="font-size:13px;color:var(--slate)">✅ <strong style="color:var(--navy)">Print + Digital</strong></div>
+    <div style="font-size:13px;color:var(--slate)">✅ <strong style="color:var(--navy)">Mobile OTP Login</strong></div>
+    <div style="font-size:13px;color:var(--slate)">✅ <strong style="color:var(--navy)">Cancel anytime</strong></div>
+    <div style="font-size:13px;color:var(--slate)">✅ <strong style="color:var(--navy)">PRGI Registered</strong></div>
+  </div>
+</div>
+
+<!-- PLANS -->
+<section style="padding:72px 0;background:var(--ivory)">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:48px">
+      <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--saffron);margin-bottom:10px">Pricing</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:var(--navy);margin-bottom:10px">Choose Your Subscription</h2>
+      <p style="font-size:16px;color:var(--slate);max-width:480px;margin:0 auto">Subscription includes login access to the digital edition via your registered mobile number and OTP.</p>
+    </div>
+    <div class="plans-grid">
+
+      <!-- SINGLE ISSUE -->
+      <div class="plan">
+        <div class="plan-name">Single Issue</div>
+        <div class="plan-price"><sup>₹</sup>109</div>
+        <div class="plan-desc">Buy a single issue — print or digital.</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="chk">✓</span> One issue — June 2026</li>
+          <li><span class="chk">✓</span> Digital access (OTP login)</li>
+          <li><span class="chk">✓</span> Print copy available at newsstand</li>
+          <li class="off"><span class="xmk">✗</span> Annual archive access</li>
+          <li class="off"><span class="xmk">✗</span> WhatsApp update alerts</li>
+          <li class="off"><span class="xmk">✗</span> Home delivery by courier</li>
+        </ul>
+        <a href="contact.html" class="btn-plan">Order Single Copy</a>
+      </div>
+
+      <!-- ANNUAL DIGITAL (FEATURED) -->
+      <div class="plan featured">
+        <div class="plan-badge">Best Value</div>
+        <div class="plan-name">Annual Digital</div>
+        <div class="plan-price"><sup>₹</sup>1090<sub>/yr</sub></div>
+        <div class="plan-desc">12 issues · full digital access · OTP login included.</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="chk">✓</span> 12 monthly issues — full year</li>
+          <li><span class="chk">✓</span> Digital access via OTP login</li>
+          <li><span class="chk">✓</span> Full back-issue archive</li>
+          <li><span class="chk">✓</span> WhatsApp circular alerts</li>
+          <li><span class="chk">✓</span> Early digital access</li>
+          <li class="off"><span class="xmk">✗</span> Print copy by courier</li>
+        </ul>
+        <a href="contact.html" class="btn-plan">Subscribe ₹1090/yr</a>
+      </div>
+
+      <!-- PRINT + DIGITAL -->
+      <div class="plan">
+        <div class="plan-name">Print + Digital</div>
+        <div class="plan-price"><sup>₹</sup>1090<sub>+courier</sub></div>
+        <div class="plan-desc">Annual subscription with printed copies delivered by courier.</div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li><span class="chk">✓</span> 12 printed copies by courier</li>
+          <li><span class="chk">✓</span> Digital access via OTP login</li>
+          <li><span class="chk">✓</span> Full back-issue archive</li>
+          <li><span class="chk">✓</span> WhatsApp circular alerts</li>
+          <li><span class="chk">✓</span> Early digital access</li>
+          <li><span class="chk">✓</span> Courier charges extra (as applicable)</li>
+        </ul>
+        <a href="contact.html" class="btn-plan">Contact for Print Sub</a>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:28px;font-size:14px;color:var(--slate)">
+      💳 Payment via UPI / Bank Transfer &nbsp;·&nbsp; Contact: <a href="mailto:officebandhhu@gmail.com" style="color:var(--navy);font-weight:600">officebandhhu@gmail.com</a> or WhatsApp <a href="tel:+919213462631" style="color:var(--navy);font-weight:600">+91-9213462631</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW SUBSCRIPTION WORKS -->
+<section style="padding:64px 0;background:var(--white)">
+  <div class="wrap" style="max-width:820px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:36px">
+      <h2 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:8px">How It Works</h2>
+      <p style="font-size:14px;color:var(--slate)">Simple 3-step process to start reading OFFICE BANDHHU</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+      <div style="text-align:center;padding:24px 16px">
+        <div style="width:56px;height:56px;background:var(--saffron);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--navy)">1</div>
+        <h4 style="font-weight:700;color:var(--navy);margin-bottom:8px;font-size:15px">Choose &amp; Pay</h4>
+        <p style="font-size:13px;color:var(--slate);line-height:1.6">Contact us via email or WhatsApp. Pay via UPI or bank transfer. We will confirm your subscription within 24 hours.</p>
+      </div>
+      <div style="text-align:center;padding:24px 16px">
+        <div style="width:56px;height:56px;background:var(--saffron);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--navy)">2</div>
+        <h4 style="font-weight:700;color:var(--navy);margin-bottom:8px;font-size:15px">Get Registered</h4>
+        <p style="font-size:13px;color:var(--slate);line-height:1.6">Your mobile number is registered in our subscriber system. You will receive a confirmation WhatsApp message.</p>
+      </div>
+      <div style="text-align:center;padding:24px 16px">
+        <div style="width:56px;height:56px;background:var(--saffron);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--navy)">3</div>
+        <h4 style="font-weight:700;color:var(--navy);margin-bottom:8px;font-size:15px">Login &amp; Read</h4>
+        <p style="font-size:13px;color:var(--slate);line-height:1.6">Click "Login" on any page, enter your mobile number, and verify the OTP sent to you. Full magazine access unlocked instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-sec">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:36px">
+      <h2 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:8px">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I login after subscribing?<span class="faq-ico">+</span></button><div class="faq-a">After your subscription is confirmed, your mobile number is registered in our system. Go to any page on officebandhhu.com, click the "Login" button in the navigation, enter your 10-digit mobile number, and verify the OTP sent to you. You will then have full access to all issues.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is included in the ₹1090 annual plan?<span class="faq-ico">+</span></button><div class="faq-a">The Annual Digital plan (₹1090/year) includes all 12 monthly issues for one full year, full digital access via OTP login, back-issue archive access, and WhatsApp alerts for important government circulars. Print copies by courier are available separately at courier cost.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What are the courier charges for print subscription?<span class="faq-ico">+</span></button><div class="faq-a">The magazine subscription fee is ₹1090/year. Courier charges for home delivery are charged separately and depend on your location in Gujarat or outside. Please contact us at officebandhhu@gmail.com or +91-9213462631 for exact courier rates to your address.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I pay? What payment methods are accepted?<span class="faq-ico">+</span></button><div class="faq-a">We accept payment via UPI (GPay, PhonePe, Paytm) and direct bank transfer (NEFT/IMPS). After payment, please share your transaction reference, name, and mobile number via WhatsApp to +91-9213462631 or email to officebandhhu@gmail.com.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I subscribe as a group / department?<span class="faq-ico">+</span></button><div class="faq-a">Yes! We offer group subscriptions for government departments, offices, and employee associations. Please contact us directly to discuss bulk subscription pricing and delivery arrangements for your department or taluka office.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is this magazine registered and official?<span class="faq-ico">+</span></button><div class="faq-a">Yes. OFFICE BANDHHU is a registered publication with PRGI No. GJGUJ/26/A3280. It is edited and published by Smt. Heta Supath Mohile and printed at Capital Offset, 801/1 GIDC Sector-28, Gandhinagar-382028. First issue published 12 June 2026.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-sq" style="margin-bottom:14px;">OB</div>
+        <p>OFFICE BANDHHU is Gujarat's dedicated monthly magazine for state government employees — covering transfers, promotions, service rules, RTI, NPS, court judgments, and ACB cases.</p>
+        <div class="foot-social"><a href="https://www.instagram.com/officebandhhu" target="_blank" class="soc-btn">ig</a><a href="https://www.youtube.com/@officebandhhu" target="_blank" class="soc-btn">yt</a><a href="mailto:officebandhhu@gmail.com" class="soc-btn">✉</a></div>
+      </div>
+      <div class="foot-col"><h4>Topics</h4><ul class="foot-links"><li><a href="articles.html">Transfers &amp; Promotions</a></li><li><a href="articles.html">RTI Special</a></li><li><a href="articles.html">NPS / Pension</a></li><li><a href="articles.html">Service Rules</a></li><li><a href="articles.html">Court Judgments</a></li><li><a href="articles.html">ACB / Vigilance</a></li></ul></div>
+      <div class="foot-col"><h4>Magazine</h4><ul class="foot-links"><li><a href="magazine.html">Current Issue</a></li><li><a href="magazine.html">Archive</a></li><li><a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a></li><li><a href="contact.html">Advertise</a></li></ul></div>
+      <div class="foot-col"><h4>Contact</h4><ul class="foot-links"><li><a href="about.html">About Us</a></li><li><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a></li></ul><div style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.4);line-height:1.8">officebandhhu@gmail.com<br>+91 92134 62631<br>G-403, Vishwas City-5, Gota<br>Ahmedabad – 382481</div></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OFFICE BANDHHU · PRGI No. GJGUJ/26/A3280 · Edited &amp; Published by Heta Supath Mohile</span>
+      <div class="foot-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="login-overlay" id="loginModal">
+  <div class="login-box">
+    <button class="lb-close" onclick="closeLogin()">✕</button>
+    <div class="lb-logo">
+      <div class="logo-sq" style="margin:0 auto 10px;width:42px;height:42px;font-size:16px">OB</div>
+      <div class="lb-brand">OFFICE BANDHHU</div>
+      <div class="lb-tagline" data-gu="સભ્ય પ્રવેશ" data-en="Subscriber Access">સભ્ય પ્રવેશ</div>
+    </div>
+    <div id="loginStep1">
+      <p class="lb-desc">Enter your registered mobile number to receive a one-time password</p>
+      <div class="mobile-input-row">
+        <span class="mob-prefix">🇮🇳 +91</span>
+        <input type="tel" id="mobileInput" class="mob-field" placeholder="10-digit mobile" maxlength="10" inputmode="numeric">
+      </div>
+      <div id="mobileErr" class="field-err"></div>
+      <button class="btn-primary lb-btn" onclick="sendOTP()" data-gu="OTP મોકલો →" data-en="Send OTP →">OTP મોકલો →</button>
+      <div class="lb-divider"></div>
+      <p class="lb-note">Not yet subscribed? <a href="subscribe.html">Subscribe here</a> for ₹1090/yr.</p>
+    </div>
+    <div id="loginStep2" style="display:none">
+      <p class="lb-desc">OTP sent to +91 <strong id="mobileDisp"></strong></p>
+      <div class="demo-otp-notice" id="otpDemoMsg"></div>
+      <input type="tel" id="otpInput" class="otp-field" placeholder="000000" maxlength="6" inputmode="numeric">
+      <div id="otpErr" class="field-err"></div>
+      <button class="btn-primary lb-btn" onclick="verifyOTP()" data-gu="ચકાસો અને લોગઇન →" data-en="Verify &amp; Login →">ચકાસો અને લોગઇન →</button>
+      <div class="lb-links">
+        <a onclick="resendOTP()">↻ Resend OTP</a>
+        <span style="color:var(--border)">|</span>
+        <a onclick="changeNumber()">← Change Number</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ઓફિસ બંધુ — ગુજરાત સરકારી કર્મચારીઓ માટેનું મેગેઝિન</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <span data-gu="📅 Vol. 1, અંક 1 · જૂન 2026 · પ્રથમ અંક · ₹109 પ્રતિ અંક" data-en="📅 Vol. 1, Issue 1 · June 2026 · First Edition · ₹109 per issue">📅 Vol. 1, અંક 1 · જૂન 2026 · પ્રથમ અંક · ₹109 પ્રતિ અંક</span>
+    <div class="util-social">
+      <a href="mailto:officebandhhu@gmail.com" data-gu="ઈ-મેઇલ" data-en="Email">ઈ-મેઇલ</a>
+      <a href="https://www.instagram.com/officebandhhu" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@officebandhhu" target="_blank">YouTube</a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="wrap">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">
+        <div class="logo-sq">OB</div>
+        <div class="logo-text">
+          <span class="brand">OFFICE BANDHHU</span>
+          <span class="tagline" data-gu="ગુજરાત સરકારી કર્મચારીઓ માટેનું મેગેઝિન" data-en="Gujarat Govt Employees Magazine">ગુજરાત સરકારી કર્મચારીઓ માટેનું મેગેઝિન</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="articles.html" data-gu="લેખો" data-en="Articles">લેખો</a></li>
+        <li><a href="magazine.html" data-gu="મેગેઝિન" data-en="Magazine">મેગેઝિન</a></li>
+        <li><a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a></li>
+        <li><a href="about.html" data-gu="અમારા વિશે" data-en="About">અમારા વિશે</a></li>
+        <li><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="langToggle" class="btn-lang" onclick="toggleLang()">🌐 English</button>
+        <span id="userBadge" class="user-badge" style="display:none"></span>
+        <a href="subscribe.html" class="btn-sub-nav" data-gu="સભ્ય બનો ₹109" data-en="Subscribe ₹109">સભ્ય બનો ₹109</a>
+        <button id="loginBtn" class="btn-login-outline" onclick="openLoginModal()" data-gu="લૉગઇન" data-en="Login">લૉગઇન</button>
+        <button id="logoutBtn" class="btn-logout" style="display:none" onclick="logout()" data-gu="લૉગ આઉટ" data-en="Logout">લૉગ આઉટ</button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="articles.html" data-gu="લેખો" data-en="Articles">લેખો</a>
+    <a href="magazine.html" data-gu="મેગેઝિન" data-en="Magazine">મેગેઝિન</a>
+    <a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a>
+    <a href="about.html" data-gu="અમારા વિશે" data-en="About">અમારા વિશે</a>
+    <a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a>
+    <a href="#" onclick="openLoginModal();return false;" style="color:var(--saffron);font-weight:700" data-gu="લૉગઇન / મારો ખાતો" data-en="Login / My Account">લૉગઇન / મારો ખાતો</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow" data-gu="પ્રારંભિક અંક · જૂન 2026" data-en="Inaugural Issue · June 2026">પ્રારંભિક અંક · જૂન 2026</div>
+        <h1 data-html data-gu="ગુજરાત સરકારી <em>કર્મચારીઓ</em> માટેનું પ્રથમ મેગેઝિન" data-en="Gujarat's First Magazine for <em>Government Employees</em>">ગુજરાત સરકારી <em>કર્મચારીઓ</em> માટેનું પ્રથમ મેગેઝિન</h1>
+        <p class="hero-desc" data-gu="બદલી, બઢતી, સેવા નિયમો, RTI ચુકાદા, NPS પેન્શન અપડેટ, કોર્ટ ચૂકાદા અને ACB કેસ — બધું એક જ જગ્યાએ, દર મહિને." data-en="Transfers, promotions, service rules, RTI rulings, NPS pension updates, court judgments, and ACB cases — all in one place, every month.">બદલી, બઢતી, સેવા નિયમો, RTI ચુકાદા, NPS પેન્શન અપડેટ, કોર્ટ ચૂકાદા અને ACB કેસ — બધું એક જ જગ્યાએ, દર મહિને.</p>
+        <div class="hero-cta">
+          <a href="magazine.html" class="btn-primary" data-gu="જૂન અંક વાંચો" data-en="Read June Issue">જૂન અંક વાંચો</a>
+          <a href="subscribe.html" class="btn-outline" data-gu="સભ્ય બનો — ₹1090/વર્ષ" data-en="Subscribe — ₹1090/yr">સભ્ય બનો — ₹1090/વર્ષ</a>
+        </div>
+        <div class="hero-meta">
+          <span class="avatar">HM</span>
+          <span data-gu="સંપાદક: Heta Supath Mohile" data-en="Editor: Heta Supath Mohile">સંપાદક: Heta Supath Mohile</span>
+          <span class="dot"></span>
+          <span data-gu="Vol. 1, અંક 1" data-en="Vol. 1, Issue 1">Vol. 1, અંક 1</span>
+          <span class="dot"></span>
+          <span data-gu="પ્રકાશિત 12 જૂન 2026" data-en="Published 12 June 2026">પ્રકાશિત 12 જૂન 2026</span>
+        </div>
+      </div>
+      <div class="hero-cover-panel">
+        <div class="mag-cover">
+          <div class="mc-top">
+            <div class="mc-brand">OFFICE BANDHHU</div>
+            <div class="mc-issue">Vol. 1 · અંક 1 · જૂન 2026 · ₹109</div>
+          </div>
+          <div class="mc-body">
+            <div class="mc-feature">72 IAS અધિકારીઓ — સામૂહિક બદલી 13 મે 2026</div>
+            <div class="mc-list">
+              <p>→ NPS કૌટુંબિક પેન્શન માર્ગદર્શિકા</p>
+              <p>→ RTI: ₹10,000 દંડ — મામલતદાર</p>
+              <p>→ DA વધ્યો — 60% (01/01/2026)</p>
+              <p>→ ACB ટ્રેપ કેસ — જૂન 2026</p>
+              <p>→ ગુજરાત HC ચૂકાદા</p>
+            </div>
+          </div>
+          <div class="mc-footer">PRGI: GJGUJ/26/A3280 · ₹109</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section style="padding:60px 0;background:var(--ivory)">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="sec-label">
+        <div>
+          <h2 data-gu="આ મહિનાની મુખ્ય વાર્તાઓ" data-en="This Month's Highlights">આ મહિનાની મુખ્ય વાર્તાઓ</h2>
+          <p data-gu="જૂન 2026 ના અંકની મહત્વની માહિતી" data-en="Key stories from the June 2026 issue">જૂન 2026 ના અંકની મહત્વની માહિતી</p>
+        </div>
+      </div>
+      <a href="articles.html" class="btn-all" data-gu="બધા લેખો →" data-en="All articles →">બધા લેખો →</a>
+    </div>
+    <div class="picks-grid">
+      <a class="card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+        <div class="card-img card-img-h190">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:44px;opacity:.2;">🏛️</div>
+          <div class="cat-badge" data-gu="બદલી અને બઢતી" data-en="Transfers & Promotions">બદલી અને બઢતી</div>
+        </div>
+        <div class="card-body">
+          <h3 data-gu="72 IAS અધિકારીઓ — ગુજરાત સામૂહિક બદલી 13 મે 2026" data-en="72 IAS Officers — Gujarat Mass Transfer Order 13 May 2026">72 IAS અધિકારીઓ — ગુજરાત સામૂહિક બદલી 13 મે 2026</h3>
+          <p data-gu="21 સચિવાલય ફેરફાર, 39 નાયબ સચિવ પ્રમોશન, 37 SFS→IFS — સંપૂર્ણ વિગત." data-en="21 Secretariat reshuffles, 39 Deputy Secretary promotions, 37 SFS→IFS — full details.">21 સચિવાલય ફેરફાર, 39 નાયબ સચિવ પ્રમોશન, 37 SFS→IFS — સંપૂર્ણ વિગત.</p>
+          <div class="art-meta">
+            <span data-gu="જૂન 2026 અંક" data-en="June 2026 Issue">જૂન 2026 અંક</span>
+            <span class="dot"></span>
+            <span>🔒 <span data-gu="સભ્ય માટે" data-en="Subscribers Only">સભ્ય માટે</span></span>
+          </div>
+        </div>
+      </a>
+      <div class="side-picks">
+        <a class="card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="card-img card-img-h115" style="background:linear-gradient(135deg,#1a3a6e,#0c2d50);">
+            <div class="cat-badge" data-gu="NPS / પેન્શન" data-en="NPS / Pension">NPS / પેન્શન</div>
+          </div>
+          <div class="card-body sm">
+            <h3 data-gu="NPS કૌટુંબિક પેન્શન — સંપૂર્ણ પાત્રતા માર્ગદર્શિકા" data-en="NPS Family Pension — Complete Eligibility Guide">NPS કૌટુંબિક પેન્શન — સંપૂર્ણ પાત્રતા માર્ગદર્શિકા</h3>
+            <div class="art-meta">
+              <span data-gu="Sri Haresh Joshi" data-en="By Sri Haresh Joshi">Sri Haresh Joshi</span>
+              <span class="dot"></span><span>🔒</span>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="magazine.html" onclick="requireLogin(function(){window.location='magazine.html'});return false;">
+          <div class="card-img card-img-h115" style="background:linear-gradient(135deg,#3a1a5e,#1b0c40);">
+            <div class="cat-badge" data-gu="RTI વિશેષ" data-en="RTI Special">RTI વિશેષ</div>
+          </div>
+          <div class="card-body sm">
+            <h3 data-gu="અરવલ્લી RTI: ₹10,000 દંડ — મામલતદાર ઉપર" data-en="Aravalli RTI Case: ₹10,000 Fine on Mamlatdar">અરવલ્લી RTI: ₹10,000 દંડ — મામલતદાર ઉપર</h3>
+            <div class="art-meta">
+              <span data-gu="જૂન 2026" data-en="June 2026">જૂન 2026</span>
+              <span class="dot"></span><span>🔒</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section style="padding:60px 0;background:var(--white)">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="sec-label">
+        <div>
+          <h2 data-gu="આ અંકમાં શું છે — જૂન 2026" data-en="What's Inside — June 2026">આ અંકમાં શું છે — જૂન 2026</h2>
+          <p data-gu="ગુજરાત સરકારી કર્મચારીઓ માટે જરૂરી વિષયો" data-en="Essential topics for Gujarat government employees">ગુજરાત સરકારી કર્મચારીઓ માટે જરૂરી વિષયો</p>
+        </div>
+      </div>
+      <a href="articles.html" class="btn-all" data-gu="બધા લેખો →" data-en="Browse all →">બધા લેખો →</a>
+    </div>
+    <div class="arts-grid">
+      <a class="art-card" href="articles.html">
+        <div class="art-img"><div class="cat-badge" data-gu="સેવા નિયમ" data-en="Service Rules">સેવા નિયમ</div></div>
+        <div class="art-body">
+          <h4 data-gu="આકસ્મિક રજા: 8 દિવસ એક સાથે મળી શકે — GR તા.06-02-1961" data-en="Casual Leave: 8 Days at One Go — GR dated 06-02-1961">આકસ્મિક રજા: 8 દિવસ એક સાથે મળી શકે — GR તા.06-02-1961</h4>
+          <p data-gu="ગુજરાત સરકારી કર્મચારીઓ એક સાથે 8 દિવસ CL ભોગવી શકે. GR ના સ્પષ્ટ ખુલાસા." data-en="Gujarat government employees can avail up to 8 consecutive casual leave days. Full GR interpretation.">ગુજરાત સરકારી કર્મચારીઓ એક સાથે 8 દિવસ CL ભોગવી શકે. GR ના સ્પષ્ટ ખુલાસા.</p>
+          <div class="art-meta"><span data-gu="જૂન 2026" data-en="June 2026">જૂન 2026</span></div>
+        </div>
+      </a>
+      <a class="art-card" href="articles.html">
+        <div class="art-img v3"><div class="cat-badge" data-gu="ACB / ભ્રષ્ટાચાર" data-en="ACB / Vigilance">ACB / ભ્રષ્ટાચાર</div></div>
+        <div class="art-body">
+          <h4 data-gu="ACB ટ્રેપ કેસ — જૂન 2026: આણંદ, ગાંધીનગર, ભરૂચ" data-en="ACB Trap Cases — June 2026: Anand, Gandhinagar, Bharuch">ACB ટ્રેપ કેસ — જૂન 2026: આણંદ, ગાંધીનગર, ભરૂચ</h4>
+          <p data-gu="ગુજરાત ACB ટ્રેપ કેસ — નામ, હોદ્દો, રકમ અને કાર્યવાહી." data-en="Gujarat ACB trap cases — names, posts, bribe amounts, and current status.">ગુજરાત ACB ટ્રેપ કેસ — નામ, હોદ્દો, રકમ અને કાર્યવાહી.</p>
+          <div class="art-meta"><span data-gu="જૂન 2026" data-en="June 2026">જૂન 2026</span></div>
+        </div>
+      </a>
+      <a class="art-card" href="articles.html">
+        <div class="art-img v5"><div class="cat-badge" data-gu="DA / પગાર" data-en="DA / Salary">DA / પગાર</div></div>
+        <div class="art-body">
+          <h4 data-gu="DA 60% — 01/01/2026 થી: 4 મહિનાનો બાકી DA ક્યારે મળશે?" data-en="DA Increased to 60% from 01/01/2026 — When Will 4-Month Arrears Be Paid?">DA 60% — 01/01/2026 થી: 4 મહિનાનો બાકી DA ક્યારે મળશે?</h4>
+          <p data-gu="DA 60% લાગુ — ગણત્રી માર્ગદર્શિકા, Pay Slip ઉપર અસર." data-en="DA revised to 60% — calculation guide, impact on your pay slip.">DA 60% લાગુ — ગણત્રી માર્ગદર્શિકા, Pay Slip ઉપર અસર.</p>
+          <div class="art-meta"><span data-gu="જૂન 2026" data-en="June 2026">જૂન 2026</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- HEALTH TIPS CORNER -->
+<section class="health-sec">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="sec-label">
+        <div>
+          <h2 data-gu="🌿 સ્વાસ્થ્ય ખૂણો" data-en="🌿 Health Tips Corner">🌿 સ્વાસ્થ્ય ખૂણો</h2>
+          <p data-gu="સંપાદક Smt. Heta Supath Mohile ના માસિક સ્વાસ્થ્ય સૂચનો" data-en="Monthly health tips by Editor Smt. Heta Supath Mohile">સંપાદક Smt. Heta Supath Mohile ના માસિક સ્વાસ્થ્ય સૂચનો</p>
+        </div>
+      </div>
+    </div>
+    <div class="editor-note">
+      <div class="editor-av">HM</div>
+      <div class="editor-note-body">
+        <p data-gu="ઑફિસ-કર્મચારી તરીકે આપણે ઘણો સમય ખુરશી ઉપર બેઠા વિતાવીએ છીએ. સ્ક્રીન, ફાઇલ, મીટિંગ — આ બધામાં આપણું સ્વાસ્થ્ય ક્યારેક ગૌણ બની જાય છે. આ ખૂણો છે ફક્ત આપ માટે — સ્વસ્થ, ખુશ, ઉત્સાહી રહો." data-en="As office workers we spend long hours at our desk. Screens, files, meetings — our health often takes a back seat. This corner is just for you — stay healthy, happy, and energised.">ઑફિસ-કર્મચારી તરીકે આપણે ઘણો સમય ખુરશી ઉપર બેઠા વિતાવીએ છીએ. સ્ક્રીન, ફાઇલ, મીટિંગ — આ બધામાં આપણું સ્વાસ્થ્ય ક્યારેક ગૌણ બની જાય છે. આ ખૂણો છે ફક્ત આપ માટે — સ્વસ્થ, ખુશ, ઉત્સાહી રહો.</p>
+        <span class="editor-sig" data-gu="— Smt. Heta Supath Mohile, સંપાદક, OFFICE BANDHHU" data-en="— Smt. Heta Supath Mohile, Editor, OFFICE BANDHHU">— Smt. Heta Supath Mohile, સંપાદક, OFFICE BANDHHU</span>
+      </div>
+    </div>
+    <div class="health-grid">
+
+      <div class="tip-card">
+        <span class="tip-ico">👁️</span>
+        <h4 data-gu="20-20-20 નો નિયમ" data-en="The 20-20-20 Rule">20-20-20 નો નિયમ</h4>
+        <p data-gu="દર 20 મિનિટે સ્ક્રીનથી નજર ખસેડો. 20 ફૂટ દૂર 20 સેકન્ડ જુઓ. આંખ ઉપર ભાર ઘટે, થાક ઓછો થાય." data-en="Every 20 minutes, look 20 feet away for 20 seconds. Reduces eye strain and digital fatigue significantly.">દર 20 મિનિટે સ્ક્રીનથી નજર ખસેડો. 20 ફૂટ દૂર 20 સેકન્ડ જુઓ. આંખ ઉપર ભાર ઘટે, થાક ઓછો થાય.</p>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-ico">🚶</span>
+        <h4 data-gu="ઊઠો અને ચાલો" data-en="Stand Up & Walk">ઊઠો અને ચાલો</h4>
+        <p data-gu="દર 45 મિનિટે ઓછામાં ઓછા 5 મિનિટ ઊભા થઈ ચાલો. ઓફિસ-ટ્રીપ, સ્ટ્રેચ — કંઈ પણ. ઓછો સ્ટ્રેસ, વધારે ઉત્સાહ." data-en="Every 45 minutes, stand up and walk for 5 minutes. An office stroll or stretch — anything. Less stress, more energy.">દર 45 મિનિટે ઓછામાં ઓછા 5 મિનિટ ઊભા થઈ ચાલો. ઓફિસ-ટ્રીપ, સ્ટ્રેચ — કંઈ પણ. ઓછો સ્ટ્રેસ, વધારે ઉત્સાહ.</p>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-ico">💧</span>
+        <h4 data-gu="8 ગ્લાસ પાણી" data-en="Drink 8 Glasses of Water">8 ગ્લાસ પાણી</h4>
+        <p data-gu="ઑફિસ-સમય દરમ્યાન ઓછામાં ઓછું 2 લિટર (8 ગ્લાસ) પાણી પીઓ. ચા-કૉફી ઘટાડો. ધ્યાન, ઉત્સાહ, ત્વચા — ત્રણેય સારાં રહે." data-en="Drink at least 2 litres (8 glasses) of water during office hours. Cut tea and coffee. Better focus, energy, and skin.">ઑફિસ-સમય દરમ્યાન ઓછામાં ઓછું 2 લિટર (8 ગ્લાસ) પાણી પીઓ. ચા-કૉફી ઘટાડો. ધ્યાન, ઉત્સાહ, ત્વચા — ત્રણેય સારાં રહે.</p>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-ico">🧘</span>
+        <h4 data-gu="5-5-5 શ્વાસ" data-en="5-5-5 Breathing">5-5-5 શ્વાસ</h4>
+        <p data-gu="5 સેકન્ડ ઊંડો શ્વાસ, 5 સ્ટ્રેસ ઘટે. ઑફિસ-ટ્રેન્શન, ઉત્તેજના, ગુસ્સો — 5 ઊંડા શ્વાસ ચમત્કાર કરે." data-en="Inhale for 5 seconds, hold 5, exhale 5. Office tension, anxiety, frustration — 5 deep breaths work wonders.">5 સેકન્ડ ઊંડો શ્વાસ, 5 સ્ટ્રેસ ઘટે. ઑફિસ-ટ્રેન્શન, ઉત્તેજના, ગુસ્સો — 5 ઊંડા શ્વાસ ચમત્કાર કરે.</p>
+      </div>
+
+      <div class="tip-card">
+        <span class="tip-ico">🍎</span>
+        <h4 data-gu="સવારનો નાસ્તો ક્યારેય ન ચૂકો" data-en="Never Skip Breakfast">સવારનો નાસ્તો ક્યારેય ન ચૂકો</h4>
+        <p data-gu="ઢોકળા, ઓટ્સ, ફળ — સ્વસ્થ સવારનો નાસ્તો ફરજિયાત. ભૂખ્યા ઑફિસ ગયા? ધ્યાન, ઉત્સાહ, ટ્રીટ ઘટી જાય." data-en="Dhokla, oats, fruits — a healthy breakfast is non-negotiable. Going to office hungry reduces focus and temper.">ઢોકળા, ઓટ્સ, ફળ — સ્વસ્થ સવારનો નાસ્તો ફરજિયાત. ભૂખ્યા ઑફિસ ગયા? ધ્યાન, ઉત્સાહ, ટ્રીટ ઘટી જાય.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LATEST ISSUE SPOTLIGHT -->
+<section style="padding:60px 0;background:var(--navy)">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center">
+      <div>
+        <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--saffron);margin-bottom:14px;display:flex;align-items:center;gap:8px"><span style="width:20px;height:2px;background:var(--saffron);display:inline-block"></span><span data-gu="પ્રથમ અંક" data-en="FIRST EDITION">પ્રથમ અંક</span></div>
+        <h2 style="font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:var(--white);line-height:1.2;margin-bottom:14px" data-gu="OFFICE BANDHHU — જૂન 2026" data-en="OFFICE BANDHHU — June 2026">OFFICE BANDHHU — જૂન 2026</h2>
+        <p style="font-size:15px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:26px" data-gu="72 IAS બદલી, DA 60%, NPS પેન્શન, RTI ચૂકાદા, ACB ટ્રેપ — ગુજરાત સરકારી કર્મચારીઓ માટે ઉપયોગી સૌ વિષયો એક અંકમાં." data-en="72 IAS transfers, DA 60%, NPS pension, RTI rulings, ACB trap cases — all essential topics for Gujarat government employees in one issue.">72 IAS બદલી, DA 60%, NPS પેન્શન, RTI ચૂકાદા, ACB ટ્રેપ — ગુજરાત સરકારી કર્મચારીઓ માટે ઉપયોગી સૌ વિષયો એક અંકમાં.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="magazine.html" class="btn-primary" data-gu="મેગેઝિન વાંચો →" data-en="Read Magazine →">મેગેઝિન વાંચો →</a>
+          <a href="subscribe.html" class="btn-outline" data-gu="સભ્ય બનો ₹1090/વર્ષ" data-en="Subscribe ₹1090/yr">સભ્ય બનો ₹1090/વર્ષ</a>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:16px 18px">
+          <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--saffron);margin-bottom:6px" data-gu="અંક" data-en="Issue">અંક</div>
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--white)">Vol. 1.1</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4)" data-gu="પ્રથમ અંક ક્યારેય" data-en="First Ever Edition">પ્રથમ અંક ક્યારેય</div>
+        </div>
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:16px 18px">
+          <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--saffron);margin-bottom:6px" data-gu="વિષયો" data-en="Topics">વિષયો</div>
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--white)">10+</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4)" data-gu="આ અંકમાં" data-en="In this issue">આ અંકમાં</div>
+        </div>
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:16px 18px">
+          <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--saffron);margin-bottom:6px" data-gu="કિંમત" data-en="Price">કિંમત</div>
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--white)">₹109</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4)" data-gu="પ્રતિ અંક" data-en="Per issue">પ્રતિ અંક</div>
+        </div>
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:16px 18px">
+          <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--saffron);margin-bottom:6px" data-gu="વાર્ષિક" data-en="Annual">વાર્ષિક</div>
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--white)">₹1090</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4)" data-gu="+ ટપાલ ખર્ચ" data-en="+ Courier charges">+ ટપાલ ખર્ચ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="nl-sec">
+  <div class="wrap">
+    <div class="nl-inner">
+      <div class="nl-text">
+        <h2 data-gu="દર મહિને અપડેટ મેળવો" data-en="Stay Updated Every Month">દર મહિને અપડેટ મેળવો</h2>
+        <p data-gu="સરકારી પરિપત્ર, બદલી આદેશ, સેવા-નિયમ ફેરફાર — ઇ-મેઇલ ઉપર મળે." data-en="Government circulars, transfer orders, service rule changes — straight to your inbox.">સરકારી પરિપત્ર, બદલી આદેશ, સેવા-નિયમ ફેરફાર — ઇ-મેઇલ ઉપર મળે.</p>
+      </div>
+      <div class="nl-form">
+        <input type="email" class="nl-input" id="nlEmail" data-placeholder-gu="ઈ-મેઇલ સરનામું" data-placeholder-en="Enter your email" placeholder="ઈ-મેઇલ સરનામું">
+        <button class="btn-nl" onclick="handleNL()" data-gu="મફત સભ્ય બનો →" data-en="Subscribe Free →">મફત સભ્ય બનો →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-sq" style="margin-bottom:14px;">OB</div>
+        <p data-gu="OFFICE BANDHHU — ગુજરાત સરકારી કર્મચારીઓ માટેનું સમર્પિત માસિક મેગેઝિન. બદલી, બઢતી, સેવા નિયમ, RTI, NPS, HC ચૂકાદા, ACB કેસ." data-en="OFFICE BANDHHU — Gujarat's dedicated monthly magazine for government employees covering transfers, promotions, service rules, RTI, NPS, court judgments, and ACB cases.">OFFICE BANDHHU — ગુજરાત સરકારી કર્મચારીઓ માટેનું સમર્પિત માસિક મેગેઝિન. બદલી, બઢતી, સેવા નિયમ, RTI, NPS, HC ચૂકાદા, ACB કેસ.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/officebandhhu" target="_blank" class="soc-btn">ig</a>
+          <a href="https://www.youtube.com/@officebandhhu" target="_blank" class="soc-btn">yt</a>
+          <a href="mailto:officebandhhu@gmail.com" class="soc-btn">✉</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4 data-gu="વિષયો" data-en="Topics">વિષયો</h4>
+        <ul class="foot-links">
+          <li><a href="articles.html" data-gu="બદલી અને બઢતી" data-en="Transfers & Promotions">બદલી અને બઢતી</a></li>
+          <li><a href="articles.html" data-gu="RTI વિશેષ" data-en="RTI Special">RTI વિશેષ</a></li>
+          <li><a href="articles.html" data-gu="NPS / પેન્શન" data-en="NPS / Pension">NPS / પેન્શન</a></li>
+          <li><a href="articles.html" data-gu="સેવા નિયમ" data-en="Service Rules">સેવા નિયમ</a></li>
+          <li><a href="articles.html" data-gu="HC ચૂકાદા" data-en="Court Judgments">HC ચૂકાદા</a></li>
+          <li><a href="articles.html" data-gu="ACB / ભ્રષ્ટાચાર" data-en="ACB / Vigilance">ACB / ભ્રષ્ટાચાર</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4 data-gu="મેગેઝિન" data-en="Magazine">મેગેઝિન</h4>
+        <ul class="foot-links">
+          <li><a href="magazine.html" data-gu="તાજો અંક" data-en="Current Issue">તાજો અંક</a></li>
+          <li><a href="magazine.html" data-gu="અંક સંગ્રહ" data-en="Archive">અંક સંગ્રહ</a></li>
+          <li><a href="subscribe.html" data-gu="સભ્ય બનો" data-en="Subscribe">સભ્ય બનો</a></li>
+          <li><a href="contact.html" data-gu="જાહેરાત" data-en="Advertise">જાહેરાત</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4 data-gu="સંપર્ક" data-en="Contact">સંપર્ક</h4>
+        <ul class="foot-links">
+          <li><a href="about.html" data-gu="અમારા વિશે" data-en="About Us">અમારા વિશે</a></li>
+          <li><a href="contact.html" data-gu="સંપર્ક" data-en="Contact">સંપર્ક</a></li>
+        </ul>
+        <div style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.4);line-height:1.8">
+          officebandhhu@gmail.com<br>+91 92134 62631<br>G-403, Vishwas City-5, Gota<br>Ahmedabad – 382481
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-gu="© 2026 OFFICE BANDHHU · PRGI No. GJGUJ/26/A3280 · સંપાદક: Heta Supath Mohile · Capital Offset, ગાંધીનગર" data-en="© 2026 OFFICE BANDHHU · PRGI No. GJGUJ/26/A3280 · Editor: Heta Supath Mohile · Printed at Capital Offset, Gandhinagar">© 2026 OFFICE BANDHHU · PRGI No. GJGUJ/26/A3280 · સંપાદક: Heta Supath Mohile · Capital Offset, ગાંધીનગર</span>
+      <div class="foot-legal">
+        <a href="#" data-gu="ગોપનીયતા નીતિ" data-en="Privacy Policy">ગોપનીયતા નીતિ</a>
+        <a href="#" data-gu="ઉપયોગ-શરત" data-en="Terms of Use">ઉપયોગ-શરત</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="login-overlay" id="loginModal">
+  <div class="login-box">
+    <button class="lb-close" onclick="closeLogin()">✕</button>
+    <div class="lb-logo">
+      <div class="logo-sq" style="margin:0 auto 10px;width:42px;height:42px;font-size:16px">OB</div>
+      <div class="lb-brand">OFFICE BANDHHU</div>
+      <div class="lb-tagline" data-gu="સભ્ય પ્રવેશ" data-en="Subscriber Access">સભ્ય પ્રવેશ</div>
+    </div>
+    <div id="loginStep1">
+      <p class="lb-desc" data-gu="OTP મેળવવા માટે નોંધાયેલો 10 અંકનો મોબાઇલ નંબર દાખલ કરો" data-en="Enter your registered mobile number to receive a one-time password">OTP મેળવવા માટે નોંધાયેલો 10 અંકનો મોબાઇલ નંબર દાખલ કરો</p>
+      <div class="mobile-input-row">
+        <span class="mob-prefix">🇮🇳 +91</span>
+        <input type="tel" id="mobileInput" class="mob-field" data-placeholder-gu="10 અંકનો મોબાઇલ" data-placeholder-en="10-digit mobile" placeholder="10 અંકનો મોબાઇલ" maxlength="10" inputmode="numeric">
+      </div>
+      <div id="mobileErr" class="field-err"></div>
+      <button class="btn-primary lb-btn" onclick="sendOTP()" data-gu="OTP મોકલો →" data-en="Send OTP →">OTP મોકલો →</button>
+      <div class="lb-divider"></div>
+      <p class="lb-note" data-gu="હજી સભ્ય નથી? <a href='subscribe.html'>અહીં સભ્ય બનો</a>" data-en="Not yet subscribed? <a href='subscribe.html'>Subscribe here</a>" data-html>હજી સભ્ય નથી? <a href="subscribe.html">અહીં સભ્ય બનો</a></p>
+    </div>
+    <div id="loginStep2" style="display:none">
+      <p class="lb-desc"><span data-gu="+91" data-en="+91">+91</span> <strong id="mobileDisp"></strong> <span data-gu="ઉપર OTP મોકલ્યો" data-en="— OTP sent">ઉપર OTP મોકલ્યો</span></p>
+      <div class="demo-otp-notice" id="otpDemoMsg"></div>
+      <input type="tel" id="otpInput" class="otp-field" data-placeholder-gu="000000" data-placeholder-en="000000" placeholder="000000" maxlength="6" inputmode="numeric">
+      <div id="otpErr" class="field-err"></div>
+      <button class="btn-primary lb-btn" onclick="verifyOTP()" data-gu="ચકાસો અને લૉગઇન →" data-en="Verify & Login →">ચકાસો અને લૉગઇન →</button>
+      <div class="lb-links">
+        <a onclick="resendOTP()" data-gu="↻ OTP ફરી મોકલો" data-en="↻ Resend OTP">↻ OTP ફરી મોકલો</a>
+        <span style="color:var(--border)">|</span>
+        <a onclick="changeNumber()" data-gu="← નંબર બદલો" data-en="← Change Number">← નંબર બદલો</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
